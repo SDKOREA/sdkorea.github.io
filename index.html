@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>SD KOREA Navigation Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Sans KR for Korean text -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans KR', Arial, sans-serif;
+      background-color: #f7f9fb;
+    }
+    /* Custom shadow for nav box */
+    .nav-shadow {
+      box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+    }
+    /* Dropdown animation */
+    .dropdown-enter {
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+    }
+    .dropdown-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.2s, transform 0.2s;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-[#f7f9fb]">
+  <header class="flex items-center px-8 py-8 bg-[#f7f9fb]">
+    <!-- Logo -->
+    <div class="flex-shrink-0">
+      <img src="https://placehold.co/160x60?text=SD+KOREA+Logo" alt="SD KOREA Logo" class="h-16 w-auto rounded bg-white object-contain shadow-sm border border-gray-100">
+    </div>
+    <!-- Navigation -->
+    <nav class="ml-12 flex-1">
+      <div class="nav-shadow border-2 border-gray-400 rounded-xl bg-white flex justify-between items-center px-12 py-8 max-w-4xl mx-auto">
+        <!-- Menu Items -->
+        <div class="flex w-full justify-between">
+          <!-- 메뉴1 -->
+          <div class="relative group">
+            <button class="text-gray-800 text-xl font-bold focus:outline-none transition hover:text-blue-600">
+              메뉴<span class="italic">1</span>
+            </button>
+            <!-- Dropdown -->
+            <div class="absolute left-1/2 -translate-x-1/2 mt-4 w-44 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-all duration-200 z-20">
+              <ul class="py-2">
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 1-1</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 1-2</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 1-3</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 메뉴2 -->
+          <div class="relative group">
+            <button class="text-gray-800 text-xl font-bold focus:outline-none transition hover:text-blue-600">
+              메뉴<span class="italic">2</span>
+            </button>
+            <!-- Dropdown -->
+            <div class="absolute left-1/2 -translate-x-1/2 mt-4 w-44 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-all duration-200 z-20">
+              <ul class="py-2">
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 2-1</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 2-2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 메뉴3 -->
+          <div class="relative group">
+            <button class="text-gray-800 text-xl font-bold focus:outline-none transition hover:text-blue-600">
+              메뉴<span class="italic">3</span>
+            </button>
+            <!-- Dropdown -->
+            <div class="absolute left-1/2 -translate-x-1/2 mt-4 w-44 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-all duration-200 z-20">
+              <ul class="py-2">
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 3-1</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 3-2</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 3-3</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 3-4</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 메뉴4 -->
+          <div class="relative group">
+            <button class="text-gray-800 text-xl font-bold focus:outline-none transition hover:text-blue-600">
+              메뉴<span class="italic">4</span>
+            </button>
+            <!-- Dropdown -->
+            <div class="absolute left-1/2 -translate-x-1/2 mt-4 w-44 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-all duration-200 z-20">
+              <ul class="py-2">
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 4-1</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-5 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">서브메뉴 4-2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+</body>
+</html>
